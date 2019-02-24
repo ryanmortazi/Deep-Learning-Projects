@@ -1,4 +1,9 @@
-# This is a detailed example of implementing a fully connected neural network in Tensorflow including two libraries in order to
+- This is a detailed example of implementing a fully connected neural network in Tensorflow including two libraries in order to
 keep the structure simple and clean.
-MNIST fashion has been used with 60000 images of shape 28 x28 for this example
-The purpose of each function has been explained in detail in order to simplify the understanding 
+- MNIST fashion has been used with 60000 images of shape 28 x28 for this example.
+- The purpose of each function has been explained in detail in order to simplify the understanding. 
+- This folder includes two examples as per below:
+
+EXAMPLE 1: in this example, we show how to implement a fully connected neural network in Tensorflow
+
+Example 2: in this example, we show how to train a model, save the model and later re-load the trained model to use on another dataset.
