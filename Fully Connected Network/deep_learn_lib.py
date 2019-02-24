@@ -29,12 +29,14 @@ def create_placeholders(n_x, n_y):
     
     return X, Y
 
-''' Testing the place holders function '''
-X, Y = create_placeholders(784, 10)
-print ("X = " + str(X))
-print ("Y = " + str(Y))
-
-
+# =============================================================================
+# ''' Testing the place holders function '''
+# X, Y = create_placeholders(784, 10)
+# print ("X = " + str(X))
+# print ("Y = " + str(Y))
+# 
+# 
+# =============================================================================
 ''' Initializing the parameters'''
 
 def initialize_parameters(n_x, n_y,units,num__layers=3):
@@ -71,16 +73,18 @@ def initialize_parameters(n_x, n_y,units,num__layers=3):
         
     return parameters
 
-
-''' testing the initializer '''
-
-tf.reset_default_graph()
-with tf.Session() as sess:
-    parameters = initialize_parameters(n_x=784,n_y=10, units=[128,128,10])
-    print("W1 = " + str(parameters["W1"]))
-    print("b1 = " + str(parameters["b1"]))
-    print("W2 = " + str(parameters["W2"]))
-    print("b2 = " + str(parameters["b2"]))
+# =============================================================================
+# 
+# ''' testing the initializer '''
+# 
+# tf.reset_default_graph()
+# with tf.Session() as sess:
+#     parameters = initialize_parameters(n_x=784,n_y=10, units=[128,128,10])
+#     print("W1 = " + str(parameters["W1"]))
+#     print("b1 = " + str(parameters["b1"]))
+#     print("W2 = " + str(parameters["W2"]))
+#     print("b2 = " + str(parameters["b2"]))
+# =============================================================================
     
     
     
@@ -111,18 +115,20 @@ def forward_propagation(X_placeholder, parameters, num__layers=3):
     temp_value_holder.clear()
     return z_output
 
-''' testing forward prpagation '''
-tf.reset_default_graph()
-
-with tf.Session() as sess:
-    X, Y = create_placeholders(784,10)
-    parameters = initialize_parameters(n_x=784,n_y=10, units=[128,128,10])
-    Z3 = forward_propagation(X, parameters)
-    print("Z3 = " + str(Z3))
-    
-''' Forward propagation'''
+# =============================================================================
+# ''' testing forward prpagation '''
+# tf.reset_default_graph()
+# 
+# with tf.Session() as sess:
+#     X, Y = create_placeholders(784,10)
+#     parameters = initialize_parameters(n_x=784,n_y=10, units=[128,128,10])
+#     Z3 = forward_propagation(X, parameters)
+#     print("Z3 = " + str(Z3))
+#     
+# ''' Forward propagation'''
+# =============================================================================
    
-def compute_cost(Z3, Y):
+def compute_cost(prediction, Y):
     """
     Computes the cost
     
@@ -133,19 +139,19 @@ def compute_cost(Z3, Y):
     Returns:
     cost - Tensor of the cost function
     """  
-    cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(logits=Z3,labels=Y))
+    cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(logits=prediction,labels=Y))
     
     return cost
 
-''' testing forward prpagation '''
-tf.reset_default_graph()
-
-with tf.Session() as sess:
-    X, Y = create_placeholders(784,10)
-    parameters = initialize_parameters(n_x=784,n_y=10, units=[128,128,10])
-    Z3 = forward_propagation(X, parameters)
-    cost = compute_cost(Z3, Y)
-    print("cost = " + str(cost))
-    
-    
-    
+# =============================================================================
+# ''' testing forward prpagation '''
+# tf.reset_default_graph()
+# 
+# with tf.Session() as sess:
+#     X, Y = create_placeholders(784,10)
+#     parameters = initialize_parameters(n_x=784,n_y=10, units=[128,128,10])
+#     Z3 = forward_propagation(X, parameters)
+#     cost = compute_cost(Z3, Y)
+#     print("cost = " + str(cost))
+#     
+# =============================================================================
