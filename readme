@@ -1,4 +1,5 @@
-This is a detailed example of implementing a fully connected neural network in Tensorflow including two libraries in order to
-keep the structure simple and clean.
-MNIST fashion has been used with 60000 images of shape 28 x28 for this example
-The purpose of each function has been explained in detail in order to simplify the understanding 
+This repository includes all the deep learning examples which would help to understand how to implement in a clean way the deep learning
+concepts in Python using Tensorflow, Keras, numpy, sklearn libraries.
+
+
+ENJOY IT :)
